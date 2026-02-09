@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kelazzz</title>
+ <script>
+  function cekPassword() {
+  var pass = document.getElementById("password").value;
+  var passwordBenar = "1234";
+
+  if (pass === passwordBenar) {
+
+    document.getElementById("introPage").style.display = "block";
+
+    var video = document.getElementById("introVideo");
+    video.play(); // ini akan aktifkan suara karena ditekan tombol
+
+    video.onended = function() {
+      masukMenu();
+    };
+
+  } else {
+    document.getElementById("error").innerText = "Password salah!";
+  }
+}
+</script>
+
+<script>
+function cekPassword() {
+  var pass = document.getElementById("password").value;
+  var passwordBenar = "1234";
+
+  if (pass === passwordBenar) {
+    document.getElementById("introPage").style.display = "block";
+    var video = document.getElementById("introVideo");
+    video.play();
+
+    video.onended = function() {
+      masukMenu();
+    };
+
+  } else {
+    document.getElementById("error").innerText = "Password salah!";
+  }
+}
+
+function skipVideo(){
+  masukMenu();
+}
+
+function masukMenu(){
+  document.getElementById("introPage").style.display = "none";
+  document.getElementById("menuPage").style.display = "block";
+}
+</script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      background-image:url("bg.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+  </style>
+  <body>
+  <style>
+  #introPage{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:black;
+  display:none;
+  z-index:999;
+}
+
+#introVideo{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  background:black;
+}
+    #loginPage{
+      text-align: center;
+      margin-top: 100px;
+    }
+    #menuPage{
+      display:none;
+      padding-block: 20px;
+    }
+    
+    .navbar{
+      background: black;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+    }
+    button{
+      padding: 10px  20px;
+      margin: 10px;
+    }
+    </script>
+  </style>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      background-image: url("bg.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>coba coba</h1> 
+  <p>MASUKAN KATA SANDI </p>
+  <input type="username" id="username"placeholder="username"style="text-align:center;"><br><br>
+  <input type="password" id="password"placeholder="password"style="text-align:center;"><br><br>
+  <button onclick="cekPassword()">MASUK</button>
+  <p id="error"></p>
+  
+  <style>
+    input{
+      display:block;
+      margin:10px auto;
+      width:200px;
+    }
+  </style>
+  <style>
+    button{
+      display:block;
+      margin:10px auto;
+      width:200px;
+    }
+  </style>
+  <style>
+    h1{
+      display:block;
+      margin:10px auto;
+      width:200px;
+    }
+  </style>
+  <style>
+    p{
+      display:block;
+      margin:10px auto;
+      width:200px;
+    }
+  </style>
+  <style>
+    body{
+      margin-block: 0;
+      height: 100vh;
+      background-image: url("bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <style>
+    body{
+      text-align-last: center;
+      margin-top: 100px;
+      font-family: arial;
+    }
+    #error{
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+  <div id="introPage" style="display:none; text-align:center;">
+    
+    <style>
+.hacker-room{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:black;
+  overflow:hidden;
+}
+
+.matrix{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.15),
+    rgba(0,255,0,0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: scroll 0.5s linear infinite;
+}
+
+@keyframes scroll{
+  0%{ background-position:0 0; }
+  100%{ background-position:0 100px; }
+}
+
+.panel{
+  position:relative;
+  z-index:2;
+  margin-top:100px;
+  text-align:center;
+  color:#00ff00;
+  font-family: monospace;
+}
+
+.panel h2{
+  font-size:28px;
+  margin-bottom:30px;
+  text-shadow:0 0 10px #00ff00;
+}
+
+.menu-btn{
+  display:block;
+  width:220px;
+  margin:15px auto;
+  padding:12px;
+  background:black;
+  border:2px solid #00ff00;
+  color:#00ff00;
+  font-family: monospace;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.menu-btn:hover{
+  background:#00ff00;
+  color:black;
+  box-shadow:0 0 20px #00ff00;
+}
+</style>
+<style>
+textarea{
+  width:260px;
+  height:120px;
+  display:block;
+  margin:10px auto;
+}
+
+select{
+  width:260px;
+  padding:8px;
+  margin:10px auto;
+  display:block;
+}
+
+#fileList{
+  margin-top:20px;
+  color:#00ff00;
+  font-family:monospace;
+}
+</style>
+
+  <video id="introVideo" playsinline>
+    <source src="intro.mp4" type="video/mp4">
+  </video>
+
+  <br><br>
+  <button onclick="skipVideo()">Skip</button>
+
+
+
+
+
+
+  
+  
+</body>
+</html>
